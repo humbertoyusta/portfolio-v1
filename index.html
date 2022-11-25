@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Humberto Yusta Portfolio</title>
+    <meta name="title" property="og:title" content="Humberto Yusta Portfolio" />
+    <meta
+      name="image"
+      property="og:image"
+      content="https://6fk35u.csb.app/images/me-10.jpg"
+    />
+    <meta
+      name="description"
+      property="og:description"
+      content="Portfolio of Humberto Yusta, including experience, education and projects"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+  </head>
+  <body>
+    <div class="body-wrapper">
+      <button title="Navbar Button" class="navbar-button"></button>
+      <div class="navbar-wrapper">
+        <div class="navbar-diagonal"></div>
+        <nav class="navbar">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+      <div id="about" class="first-part">
+        <div class="photo-card-box">
+          <div class="photo-card-fake">
+            <img class="my-photo" src="images/me-10.jpg" alt="personal-photo" />
+            <div class="photo-card">
+              <h1>Humberto Yusta</h1>
+              <h2>CS Student</h2>
+            </div>
+          </div>
+        </div>
+        <div class="about-me">
+          <h3>About me</h3>
+          <p>
+            Computer Science Student, Backend Developer Junior, and Competitive
+            Programmer with 5 years of experience. Passionate about Coding and
+            Math, looking forward to continuous learning, professional
+            development, and learning new technologies and tools if the need
+            arises.
+          </p>
+        </div>
+      </div>
+      <div id="experience" class="second-part">
+        <article class="experience">
+          <h3>Experience</h3>
+          <section class="odd">
+            <div class="logo-box">
+              <div class="logo ioi-logo"></div>
+            </div>
+            <div class="experience-info">
+              <h4>Competitive Programmer</h4>
+              <h5>2018 - Present</h5>
+              <p>
+                Bronze medalist in IOI, Gold medalist in Iberoamerican
+                competition, Grandmaster in codeforces.
+              </p>
+            </div>
+          </section>
+          <section class="even">
+            <div class="logo-box">
+              <div class="logo laravel-logo"></div>
+            </div>
+            <div class="experience-info">
+              <h4>Backend Developer Junior</h4>
+              <h5>Leagues of Code, Barcelona, Spain, Sep. 2022 - Present</h5>
+              <p>
+                Creating and testing GraphQL endpoints, using Laravel framework
+                and Eloquent ORM.
+              </p>
+            </div>
+          </section>
+          <section class="odd">
+            <div class="logo-box">
+              <div class="logo loc-logo"></div>
+            </div>
+            <div class="experience-info">
+              <h4>Competitive Programming Teacher</h4>
+              <h5>Leagues of Code, Barcelona, Spain, Sep. 2022 - Present</h5>
+              <p>
+                Teaching a 60 hours introductiory course in C++ for high school
+                students in competitive programming.
+              </p>
+            </div>
+          </section>
+        </article>
+      </div>
+      <article id="projects" class="third-part">
+        <h3>Projects</h3>
+        <div class="projects">
+          <div class="hoverable">
+            <section class="project">
+              <div class="project-logo codeforces-logo"></div>
+              <h4>
+                <a href="https://codeforces.com/blog/entry/99299">
+                  Codeforces Round #768 (Div. 1, Div. 2)
+                </a>
+              </h4>
+              <p>
+                Competitive Programming Contest with more than 26'000
+                participants
+              </p>
+            </section>
+          </div>
+          <div class="hoverable">
+            <section class="project">
+              <div class="project-logo cp-logo"></div>
+              <h4>CP Problems</h4>
+              <p>
+                Competitive programming problems used in international and
+                national competitions.
+              </p>
+            </section>
+          </div>
+          <div class="hoverable">
+            <section class="project">
+              <div class="project-logo nest-js-logo"></div>
+              <h4>Web Chat Back End</h4>
+              <p>
+                RESTful API for a web cat using NestJS
+              </p>
+            </section>
+          </div>
+        </article>
+      </div>
+      <div id="education" class="fourth-part">
+        <h3>Education</h3>
+        <section class="hs">
+          <div class="hs-photo"></div>
+          <h4>Harbour Space University</h4>
+          <h5>Sep. 2022 - Sep. 2025</h5>
+          <p>
+            Bachelor degree in Computer Science with a minor in Data Science.
+          </p>
+        </section>
+      </div>
+      <div id="contact" class="fifth-part">
+        <div class="networking-photo">
+          <div class="blue-diagonal"></div>
+        </div>
+        <div class="white-diagonal"></div>
+        <div class="contact-card">
+          <div class="contact-element">
+            <div class="hoverable">
+              <p class="email">humbertoyusta02@gmail.com</p>
+              <div class="icon email-icon"></div>
+            </div>
+          </div>
+          <div class="contact-element">
+            <div class="hoverable">
+              <p class="phone">+34 607 86 86 84</p>
+              <div class="icon phone-icon"></div>
+            </div>
+          </div>
+          <div class="contact-element">
+            <div class="hoverable">
+              <p class="location">Barcelona, Spain</p>
+              <div class="icon location-icon"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Import GSAP library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+
+    <!--Import GSAP ScrollTrigger-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
+    <!--Import my own script for animations-->
+    <script src="script.js"></script>
+  </body>
+</html>

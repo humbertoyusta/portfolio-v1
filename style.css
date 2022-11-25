@@ -1,0 +1,680 @@
+/**
+ * CSS Vatiables
+ */
+
+:root {
+  --blue: rgb(34, 63, 97);
+  --lr-margin: 35px;
+  --lr-margin-2: 35px;
+  --logo-size: 200px;
+  --project-logo-size: 180px;
+  --hs-photo-size: 200px;
+  --light-blue: #bceeff;
+}
+
+/**
+ * CSS Defaults
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  border: none;
+}
+
+body {
+  font-family: "Roboto", serif;
+  font-size: 18px;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.body-wrapper {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/**
+ * First Part CSS (About and Photo card)
+ */
+
+.photo-card-fake {
+  background-color: white;
+  position: relative;
+  margin: 190px auto 0 auto;
+  width: 220px;
+}
+
+.photo-card {
+  position: relative;
+  text-align: center;
+  background-color: var(--blue);
+  color: white;
+  transition: color 1s;
+}
+
+.photo-card:hover {
+  color: var(--light-blue);
+}
+
+.my-photo {
+  display: block;
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 6px solid var(--blue);
+  margin: 0 20px;
+  top: -90px;
+  z-index: 1;
+}
+
+.photo-card h1 {
+  padding-top: 100px;
+  padding-bottom: 8px;
+  font-weight: lighter;
+}
+
+.photo-card h2 {
+  padding-bottom: 30px;
+  font-weight: lighter;
+}
+
+.about-me {
+  margin: 80px var(--lr-margin) 0 var(--lr-margin);
+  margin-top: 80px;
+}
+
+.about-me h3 {
+  margin-bottom: 40px;
+}
+
+/**
+ * Second Part CSS (Experience)
+ */
+
+.second-part {
+  margin: 60px 0;
+  padding: 60px 0;
+}
+
+.second-part h3 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.logo-box {
+  margin-top: 40px;
+  position: relative;
+  height: var(--logo-size);
+  background-color: var(--blue);
+  width: 40%;
+}
+
+.even .logo-box {
+  right: -60%;
+}
+
+.logo {
+  width: var(--logo-size);
+  height: var(--logo-size);
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  border: 10px solid var(--blue);
+  position: absolute;
+  background-color: white;
+}
+
+.odd .logo {
+  right: calc(var(--logo-size) * -0.5);
+}
+
+.even .logo {
+  left: calc(var(--logo-size) * -0.5);
+}
+
+.ioi-logo {
+  background-image: url("logos/ioi.jpeg");
+}
+
+.laravel-logo {
+  background-image: url("logos/Laravel.svg");
+}
+
+.loc-logo {
+  background-image: url("logos/loc-logo.svg");
+}
+
+.experience h4 {
+  margin: 30px var(--lr-margin-2) 10px var(--lr-margin-2);
+}
+
+.experience h5 {
+  margin: 0 var(--lr-margin-2) 8px var(--lr-margin-2);
+  font-style: italic;
+  color: #333;
+  font-weight: lighter;
+}
+
+.experience p {
+  margin: 0 var(--lr-margin-2);
+}
+
+/**
+ * Third part CSS (Projects)
+ */
+
+.third-part {
+  margin-top: 60px;
+  padding-top: 60px;
+  margin: 0 var(--lr-margin);
+}
+
+.third-part h3 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  gap: 25px;
+  color: white;
+}
+
+.project {
+  text-align: center;
+  padding: 30px 20px 30px 20px;
+  margin-bottom: 30px;
+  max-width: calc(var(--project-logo-size) + 80px);
+  position: relative;
+  height: calc(var(--project-logo-size) * 2.2);
+  background-color: var(--blue);
+}
+
+.projects .hoverable {
+  transition: transform 1s, color 1s;
+  display: flex;
+  flex-direction: row;
+}
+
+.projects .hoverable:hover {
+  transform: translateY(-30px);
+  color: var(--light-blue);
+}
+
+.project h4 {
+  margin-top: 20px;
+}
+
+.project p {
+  margin-top: 10px;
+}
+
+.project-logo {
+  margin: 0 auto;
+  width: var(--project-logo-size);
+  height: var(--project-logo-size);
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  border-radius: 5%;
+}
+
+.codeforces-logo {
+  background-image: url("logos/Codeforces.colored.svg");
+}
+
+.cp-logo {
+  background-size: 100%;
+  background-image: url("logos/cp-logo.png");
+}
+
+.nest-js-logo {
+  background-image: url("logos/nest-js-logo.png");
+}
+
+/**
+ * Fourth part CSS (Education)
+ */
+
+.fourth-part {
+  margin: 0 var(--lr-margin);
+}
+
+.fourth-part h3 {
+  margin: 60px 0 60px 0;
+  padding: 60px 0 0 0;
+  text-align: center;
+}
+
+.hs {
+  background-color: var(--blue);
+  color: white;
+  margin-right: var(--lr-margin-2);
+  text-align: center;
+  padding: 30px 10px;
+  border-radius: 5%;
+  max-width: 420px;
+  margin: 0 auto;
+  position: relative;
+  transition: color 1s;
+}
+
+.hs:hover {
+  color: var(--light-blue);
+}
+
+.hs h4 {
+  margin: 15px 10px 5px 10px;
+}
+
+.hs h5 {
+  margin: 0 10px 10px 10px;
+}
+
+.hs p {
+  margin: 0 10px;
+}
+
+.hs-photo {
+  display: inline-block;
+  width: var(--hs-photo-size);
+  height: var(--hs-photo-size);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("images/hs-photo.jpeg");
+  background-color: white;
+  border-radius: 50%;
+}
+
+/**
+ * Fifth part CSS (Contact card)
+ */
+
+.fifth-part {
+  margin: 40px 0 0 0;
+  background-color: var(--blue);
+  overflow: hidden;
+  height: 180px;
+  border-color: white;
+}
+
+.contact-card {
+  border-color: white;
+  right: 0;
+  padding: 30px 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 180px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: 100%;
+  filter: invert();
+}
+
+.email-icon {
+  background-image: url("logos/mail-212.svg");
+}
+
+.phone-icon {
+  background-image: url("logos/phone-73.svg");
+}
+
+.location-icon {
+  background-image: url("logos/location-130.svg");
+}
+
+.contact-element p {
+  margin-right: 10px;
+}
+
+.contact-element .email {
+  margin-right: 10px;
+}
+
+.contact-element .hoverable {
+  transition: transform 1s, color 1s;
+  display: flex;
+  flex-direction: row;
+  align-items: inherit;
+  align-items: center;
+}
+
+.contact-element .hoverable:hover {
+  transform: translateX(-30px);
+  color: var(--light-blue);
+}
+
+.contact-element .email {
+  font-size: 14px;
+}
+
+/**
+ * Responsiveness
+ */
+
+/**
+ * Navbar for small screens
+ */
+
+@media (max-width: 900px) {
+  .navbar-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-image: url("logos/bars-17.svg");
+    background-size: 100%;
+    width: 32px;
+    height: 32px;
+    background-color: white;
+  }
+
+  .navbar-wrapper {
+    transition: transform 1s, opacity 1s;
+    pointer-events: none;
+  }
+
+  .navbar-wrapper.visible {
+    transform: translate(-20px, 50px);
+    opacity: 1;
+    pointer-events: visible;
+  }
+
+  .navbar-wrapper {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    background-color: white;
+    border-radius: 10%;
+    box-shadow: 2px 2px lightgrey;
+  }
+
+  .navbar.visible {
+    display: flex;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    padding: 10px 6px;
+  }
+
+  .navbar a {
+    padding: 4px 2px;
+    transition: transform 0.5s, color 0.5s;
+  }
+
+  .navbar a:hover {
+    color: var(--blue);
+    transform: translateY(-2px);
+  }
+}
+
+/**
+ * General responsiveness for medium-big screen sizes 450px
+ */
+
+@media (min-width: 450px) {
+  :root {
+    --lr-margin: 50px;
+    --lr-margin-2: 50px;
+  }
+  body {
+    font-size: 20px;
+  }
+  .contact-element .email {
+    font-size: 1em;
+  }
+}
+
+/**
+ * Responsiveness for the fourth part (Education)
+ */
+
+@media (min-width: 500px) {
+  :root {
+    --hs-photo-size: 320px;
+  }
+}
+
+@media (min-width: 600px) {
+  /**
+   * Responsiveness for first part (photo card and about)
+   */
+  .first-part {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .photo-card-box {
+    width: 40%;
+  }
+
+  .about-me {
+    width: 60%;
+    max-width: 450px;
+    margin-top: 200px;
+  }
+
+  /**
+   * Responsiveness for second part (Experience)
+   */
+  :root {
+    --lr-margin-2: 80px;
+  }
+}
+
+@media (min-width: 720px) {
+  /**
+   * Responsiveness for second part (Experience)
+   */
+  :root {
+    --lr-margin-2: max(240px, 30%);
+  }
+
+  .logo-box {
+    position: absolute;
+    margin-top: 0;
+    width: calc(var(--lr-margin-2) - 20px - 0.5 * var(--logo-size));
+  }
+
+  .even .logo-box {
+    position: absolute;
+    right: 0;
+  }
+
+  .even .experience-info {
+    text-align: right;
+  }
+
+  .experience section {
+    min-height: var(--logo-size);
+  }
+
+  /**
+   * Responsiveness for the fifth part (Contact)
+   */
+  :root {
+    --networking-photo-width: 500px;
+  }
+
+  .fifth-part {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+  }
+
+  .networking-photo {
+    height: 180px;
+    width: var(--networking-photo-width);
+    background-size: 200%;
+    background-position: center;
+    background-image: url("images/net-3.webp");
+    position: relative;
+  }
+}
+
+@media (min-width: 900px) {
+  /**
+   * General responsiveness
+   */
+  body {
+    font-size: 24px;
+  }
+
+  /**
+   * Responsiveness for Navbar
+   */
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+  }
+
+  .navbar-wrapper {
+    position: absolute;
+    display: block;
+    height: 44px;
+    width: 50%;
+    top: 0;
+    right: 0;
+    background-color: var(--blue);
+    color: white;
+    font-weight: lighter;
+    font-size: 20px;
+    padding: 10px 0;
+  }
+
+  .navbar-diagonal {
+    position: absolute;
+    rotate: -18deg;
+    height: 61px;
+    width: 30px;
+    top: -20px;
+    left: -10px;
+    background-color: var(--blue);
+    z-index: -1;
+  }
+
+  .navbar a {
+    transition: color 0.6s, transform 0.6s;
+  }
+
+  .navbar a:hover {
+    color: var(--light-blue);
+    transform: translateY(-2px);
+  }
+
+  /**
+   * Responsiveness for first part (Photo card and about)
+   */
+  .photo-card-fake {
+    width: 270px;
+    margin: 220px auto 0 auto;
+  }
+
+  .my-photo {
+    width: 220px;
+    height: 220px;
+    margin: 0 25px;
+    top: -110px;
+  }
+
+  /**
+   * Responsiveness for second part (Experience)
+   */
+  :root {
+    --logo-size: 240px;
+  }
+
+  .logo-box {
+    width: calc(var(--lr-margin-2) - 40px - 0.5 * var(--logo-size));
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1100px) {
+  /**
+   * Responsiveness for the third part (Projects)
+   */
+  .project {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1100px) {
+  /**
+   * Responsiveness for the third part (Projects)
+   */
+  :root {
+    --project-logo-size: 220px;
+  }
+
+  .project {
+    width: calc(var(--project-logo-size) + 80px);
+  }
+  /**
+   * Responsiveness for the fifth part (Contact)
+   */
+  .white-diagonal {
+    background-color: white;
+    width: 40px;
+    height: 200px;
+    border-color: white;
+    position: relative;
+    rotate: 12deg;
+    top: -10px;
+  }
+
+  .blue-diagonal {
+    background-color: var(--blue);
+    width: 40px;
+    height: 200px;
+    border-color: var(--blue);
+    position: relative;
+    rotate: 12deg;
+    left: calc(var(--networking-photo-width) - 22px);
+  }
+}
+
+/**
+ * Responsiveness for the second part (Experience)
+ */
+@media (min-width: 1200px) {
+  :root {
+    --logo-size: 280px;
+  }
+
+  .logo-box {
+    width: calc(var(--lr-margin-2) - 60px - 0.5 * var(--logo-size));
+  }
+}
